@@ -1,0 +1,31 @@
+{
+  "name": "promise-all",
+  "version": "0.1.0",
+  "description": "A Promise.all but for Objects as well as Arrays",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "xo",
+    "pretest": "npm run -s lint",
+    "test": "ava"
+  },
+  "keywords": [
+    "promise",
+    "all",
+    "promise.all",
+    "object",
+    "functional"
+  ],
+  "author": {
+    "name": "Joakim Carlstein",
+    "email": "joakim@klei.se"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.1.0",
+    "xo": "^0.8.0"
+  },
+  "repository": "joakimbeng/promise-all",
+  "dependencies": {
+    "is-plain-object": "^2.0.1"
+  }
+}
