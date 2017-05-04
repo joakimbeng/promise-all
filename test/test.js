@@ -46,3 +46,22 @@ test('no array or object', function (assert) {
 			assert.is(actual, expected);
 		});
 });
+
+test('object recursive', function (assert) {
+	assert.plan(1);
+	return all({
+		key1: Promise.resolve('key1'),
+		key2: {
+			key3: Promise.resolve('key2.key3')
+		}
+	})
+		.then(function (actual) {
+			var expected = {
+				key1: 'key1',
+				key2: {
+					key3: 'key2.key3'
+				}
+			};
+			assert.same(actual, expected);
+		});
+});
