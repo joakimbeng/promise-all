@@ -1,5 +1,6 @@
 'use strict';
 var isPlainObject = require('is-plain-object');
+var objectAssign = require('object-assign');
 
 function all(val) {
 	if (Array.isArray(val)) {
@@ -11,7 +12,7 @@ function all(val) {
 	val = Object.keys(val).reduce(function (res, k) {
 		var obj = {};
 		obj[k] = typeof val[k] === 'object' ? all(val[k]) : val[k];
-		return Object.assign(res, obj);
+		return objectAssign(res, obj);
 	}, {});
 
 	var keys = Object.keys(val);

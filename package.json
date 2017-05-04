@@ -26,6 +26,7 @@
   },
   "repository": "joakimbeng/promise-all",
   "dependencies": {
-    "is-plain-object": "^2.0.1"
+    "is-plain-object": "^2.0.1",
+    "object-assign": "^4.1.1"
   }
 }
